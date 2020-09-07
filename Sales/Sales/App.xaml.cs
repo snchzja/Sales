@@ -10,7 +10,7 @@
         {
             InitializeComponent();
 
-            MainPage = new ProductsPage(); // la pagina principal va a ser ProductsPage
+            MainPage = new NavigationPage(new ProductsPage()); // la pagina principal va a ser ProductsPage
         }
 
         protected override void OnStart()
