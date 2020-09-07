@@ -17,6 +17,8 @@ namespace Sales.API
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
+            //Eliminar el formato Xml
+            //config.Formatters.Remove(config.Formatters.XmlFormatter);
             // Rutas de Web API
             config.MapHttpAttributeRoutes();
 

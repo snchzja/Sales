@@ -6,10 +6,22 @@
     {
         [Key]
         public int ProductId { get; set; }
+
         [Required]
-        public int Description { get; set; }
+        [StringLength(50)]
+        public string Name { get; set; }
+
+        [DataType(DataType.MultilineText)]
+        public string Description { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
         public Decimal Price { get; set; }
+
+        [Display(Name = "Is Available" )]
         public bool IsAvailable { get; set; }
+
+        [Display(Name = "Publish On")]
+        [DataType(DataType.Date)]
         public DateTime PublishOn { get; set; }
     }
 }
